@@ -1,0 +1,51 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>유진이의 일상기록</title>
+<style>
+    #emoji-area{
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .balloon {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 5px 0;
+      display: block;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }    
+</style>
+  </head>
+  <body>
+    <h1>안녕하세요!</h1>
+    <p>오늘은 웹페이지 만들기에 도전한 날이에요.</p>
+    <p>GPT랑 웹 코딩을 배우고 있어요!</p>
+
+    <button onclick="meow()">🐱 고양이 눌러줘!</button>
+    <button onclick="ferret()">🦦 족제비가 나타났다!</button>
+
+<div id="emoji-area"></div>
+
+    <script>
+      function meow() {
+        const now = new Date();
+        const time = now.toLocaleString();
+        console.log("야옹!");
+        const message = `<div class="balloon">🐱 먀옹!<br>(${time})</div>`;
+        document.getElementById("emoji-area").innerHTML += message;
+      }
+
+      function ferret(){
+        const now = new Date();
+        const time = now.toLocaleString();
+        console.log("꾸꾸!");
+        const message = `<div class="balloon">🦦 꾸꾸!<br>(${time})</div>`;
+        document.getElementById("emoji-area").innerHTML += message;
+      }
+
+      console.log("유진이의 첫 콘솔 메시지입니다!");
+    </script>
+  
+
+</body></html>
